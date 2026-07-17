@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>To Do List</h1>
+    </header>
+
+    <dialog id="task-dialog">
+      <h2>Add Task</h2>
+      <form id="task-form">
+        <input type="text" id="task-title" placeholder="Title" required />
+        <br />
+        <input type="text" id="task-description" placeholder="Description" />
+        <br />
+        <input type="date" id="task-date" />
+        <br />
+        <select id="task-priority">
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+        <button type="submit" id="submit-book">Add</button>
+        <br />
+        <button type="button" id="cancel-btn">Cancel</button>
+      </form>
+    </dialog>
+    <button id="open-dialog-btn">+ New Todo</button>
+    <input type="text" id="new-project-input" placeholder="+ New Project" />
+
+    <div id="content"></div>
+  </body>
+</html>

@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #fff0f5;
+  min-height: 100vh;
+  padding: 0;
+}
+
+/* ── Header ── */
+header {
+  background: linear-gradient(90deg, #f9a8d4, #fbcfe8);
+  padding: 20px 32px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(244, 114, 182, 0.2);
+}
+
+header h1 {
+  color: #9d174d;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* ── New Todo button ── */
+#open-dialog-btn {
+  display: block;
+  margin: 28px auto 0;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #f472b6, #ec4899);
+  color: white;
+  border: none;
+  border-radius: 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.35);
+  transition:
+    transform 0.15s,
+    box-shadow 0.15s;
+}
+
+#open-dialog-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(236, 72, 153, 0.45);
+}
+
+/* ── New Project input ── */
+#new-project-input {
+  display: block;
+  margin: 16px auto 0;
+  padding: 12px 20px;
+  width: 280px;
+  font-size: 1rem;
+  border: 2px solid #f9a8d4;
+  border-radius: 24px;
+  background: white;
+  color: #be185d;
+  outline: none;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+#new-project-input::placeholder {
+  color: #f9a8d4;
+}
+
+#new-project-input:focus {
+  border-color: #ec4899;
+  box-shadow: 0 0 0 3px rgba(244, 114, 182, 0.2);
+}
+
+/* ── Content area ── */
+#content {
+  max-width: 600px;
+  margin: 24px auto;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#content:empty {
+  border: none;
+  padding: 0;
+}
+
+/* ── Dialog ── */
+dialog#task-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  border-radius: 16px;
+  padding: 28px;
+  width: 340px;
+  box-shadow: 0 12px 40px rgba(244, 114, 182, 0.3);
+  background: white;
+}
+
+dialog#task-dialog::backdrop {
+  background: rgba(157, 23, 77, 0.25);
+  backdrop-filter: blur(2px);
+}
+
+#task-dialog h2 {
+  text-align: center;
+  color: #be185d;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+#task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#task-form input,
+#task-form select {
+  padding: 10px 14px;
+  border: 1.5px solid #fbcfe8;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  width: 100%;
+  color: #4a044e;
+  background: #fff7fb;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+#task-form input:focus,
+#task-form select:focus {
+  border-color: #f472b6;
+  background: white;
+}
+
+#task-form button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  background: linear-gradient(135deg, #f472b6, #ec4899);
+  color: white;
+  transition: opacity 0.2s;
+}
+
+button[type="submit"]:hover {
+  opacity: 0.88;
+}
+
+#cancel-btn {
+  background: #fce7f3;
+  color: #be185d;
+  transition: background 0.2s;
+}
+
+#cancel-btn:hover {
+  background: #fbcfe8;
+}
+
+.task-card {
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 12px;
+  border: #4a044e 2px solid;
+  border-radius: 5px;
+}
+
+.task-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.task-text span {
+  font-weight: 700;
+  color: #4a044e;
+}
+
+.task-text div {
+  font-size: 0.85rem;
+  color: #9d174d;
+}
+
+/* .content:empty {
+  border: none;
+  padding: 0; 
+} */
