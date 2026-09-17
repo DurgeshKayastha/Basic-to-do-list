@@ -6,6 +6,9 @@ let content = document.querySelector("#content");
 
 
 
+
+
+
 //Submitting the task and adding it to todo list
 
 let taskTitle = document.querySelector("#task-title");
