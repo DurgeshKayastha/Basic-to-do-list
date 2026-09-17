@@ -19,6 +19,8 @@ let taskPriority = document.querySelector("#task-priority");
 taskForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
+  
+
   let newTask = new Task(
     taskTitle.value,
     taskDescription.value,
