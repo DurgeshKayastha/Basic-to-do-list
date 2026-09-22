@@ -5,6 +5,8 @@ export class Project {
     this.tasks = [];
   }
 
+
+  
   addTask(task) {
     this.tasks.push(task);
   }
