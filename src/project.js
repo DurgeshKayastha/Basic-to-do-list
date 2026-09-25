@@ -9,7 +9,7 @@ export class Project {
 
 
 
-  
+
   
   addTask(task) {
     this.tasks.push(task);
@@ -19,3 +19,5 @@ export class Project {
     this.tasks = this.tasks.filter((task) => task.id !== taskId);
   }
 }
+
+
